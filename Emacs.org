@@ -24,7 +24,7 @@ This is the configuration we’ve been building in the Emacs From Scratch series
 
 *  Tips For Use
 
-In this document I’ve added links in many places that lead you to documentation for the various packages we use. If you’re looking at this file in Emacs, you can put your cursor on a link and press /C-c C-o/ or run /M-x org-open-at-point/ to open the link in your web browser.
+In this document I’ve added links in many places that lead you to documentation for the various packages we use. If you’re looking at this file in Emacs, you can put your cursor on a link and press =C-c C-o= or run =M-x org-open-at-point= to open the link in your web browser.
 
 * Startup Perfomance
 
@@ -73,7 +73,7 @@ Emacs has a built in package manager but it doesn’t make it easy to automatica
 ** Automatic Package Updates
 The auto-package-update package helps us keep our Emacs packages up to date! It will prompt you after a certain number of days either at startup or at a specific time of day to remind you to update your packages.
 
-You can also use /M-x auto-package-update-now/ to update right now!
+You can also use =M-x auto-package-update-now= to update right now!
 
 #+begin_src emacs-lisp
 
@@ -170,7 +170,7 @@ We use the [[https://github.com/emacscollective/no-littering/blob/master/no-litt
    
 *  Basic UI Configuration
 
-This section configures basic UI settings that remove unneeded elements to make Emacs look a lot more minimal and modern. If you’re just getting started in Emacs, the menu bar might be helpful so you can remove the /(menu-bar-mode -1)/ line if you’d like to still see that.
+This section configures basic UI settings that remove unneeded elements to make Emacs look a lot more minimal and modern. If you’re just getting started in Emacs, the menu bar might be helpful so you can remove the =(menu-bar-mode -1)= line if you’d like to still see that.
 
 #+begin_src emacs-lisp 
 
@@ -323,7 +323,7 @@ This configuration uses [[https://evil.readthedocs.io/en/latest/index.html][evil
 
 ** Color Theme
 
-[[https://github.com/hlissner/emacs-doom-themes][doom-themes]] is a great set of themes with a lot of variety and support for many different Emacs modes. Taking a look at the [[https://github.com/hlissner/emacs-doom-themes/tree/screenshots][screenshots]] might help you decide which one you like best. You can also run /M-x counsel-load-theme/ to choose between them easily.
+[[https://github.com/hlissner/emacs-doom-themes][doom-themes]] is a great set of themes with a lot of variety and support for many different Emacs modes. Taking a look at the [[https://github.com/hlissner/emacs-doom-themes/tree/screenshots][screenshots]] might help you decide which one you like best. You can also run =M-x counsel-load-theme= to choose between them easily.
 
 #+begin_src emacs-lisp
 
@@ -350,7 +350,7 @@ This configuration uses [[https://evil.readthedocs.io/en/latest/index.html][evil
 
 ** Which Key
 
-[[https://github.com/justbur/emacs-which-key][which-key]]  is a useful UI panel that appears when you start pressing any key binding in Emacs to offer you all possible completions for the prefix. For example, if you press /C-c/ (hold control and press the letter /c/), a panel will appear at the bottom of the frame displaying all of the bindings under that prefix and which command they run. This is very useful for learning the possible key bindings in the mode of your current buffer.
+[[https://github.com/justbur/emacs-which-key][which-key]]  is a useful UI panel that appears when you start pressing any key binding in Emacs to offer you all possible completions for the prefix. For example, if you press =C-c= (hold control and press the letter =c=), a panel will appear at the bottom of the frame displaying all of the bindings under that prefix and which command they run. This is very useful for learning the possible key bindings in the mode of your current buffer.
 
 #+begin_src emacs-lisp
 
@@ -462,7 +462,7 @@ Prescient also has an extension for Company to provide candidate sorting based o
 
 ** Helful Help Commands
 
-[[https://github.com/Wilfred/helpful][Helpful ]]adds a lot of very helpful (get it?) information to Emacs’ /describe-/ command buffers. For example, if you use /describe-function,/ you will not only get the documentation about the function, you will also see the source code of the function and where it gets used in other places in the Emacs configuration. It is very useful for figuring out how things work in Emacs.
+[[https://github.com/Wilfred/helpful][Helpful ]]adds a lot of very helpful (get it?) information to Emacs’ =describe-= command buffers. For example, if you use =describe-function=, you will not only get the documentation about the function, you will also see the source code of the function and where it gets used in other places in the Emacs configuration. It is very useful for figuring out how things work in Emacs.
 
 #+begin_src emacs-lisp
 
@@ -480,7 +480,7 @@ Prescient also has an extension for Company to provide candidate sorting based o
 
 ** Text Scaling
 
-This is an example of using [[https://github.com/abo-abo/hydra][Hydra]] to design a transient key binding for quickly adjusting the scale of the text on screen. We define a hydra that is bound to /C-space  t  s/ and, once activated, /j/ and /k/ increase and decrease the text scale. You can press any other key (or /f/ specifically) to exit the transient key map.
+This is an example of using [[https://github.com/abo-abo/hydra][Hydra]] to design a transient key binding for quickly adjusting the scale of the text on screen. We define a hydra that is bound to =C-space t s= and, once activated, =j= and =k= increase and decrease the text scale. You can press any other key (or =f= specifically) to exit the transient key map.
 
 #+begin_src emacs-lisp
 
@@ -504,7 +504,7 @@ This is an example of using [[https://github.com/abo-abo/hydra][Hydra]] to desig
 
 ** Better Font Faces
 
-The /efs/org-font-setup/ function configures various text faces to tweak the sizes of headings and use variable width fonts in most cases so that it looks more like we’re editing a document in /org-mode/. We switch back to fixed width (monospace) fonts for code blocks and tables so that they display correctly.
+The =efs/org-font-setup= function configures various text faces to tweak the sizes of headings and use variable width fonts in most cases so that it looks more like we’re editing a document in =org-mode=. We switch back to fixed width (monospace) fonts for code blocks and tables so that they display correctly.
 
 #+begin_src emacs-lisp
 
@@ -544,8 +544,7 @@ The /efs/org-font-setup/ function configures various text faces to tweak the siz
 
 ** Basic Config
 
-
-This section contains the basic configuration for /org-mode/ plus the configuration for Org agendas and capture templates. There’s a lot to unpack in here so I’d recommend watching the videos for [[https://youtu.be/VcgjTEa0kU4][Part 5]] and [[https://youtu.be/PNE-mgkZ6HM][Part 6]] for a full explanation.
+This section contains the basic configuration for =org-mode= plus the configuration for Org agendas and capture templates. There’s a lot to unpack in here so I’d recommend watching the videos for [[https://youtu.be/VcgjTEa0kU4][Part 5]] and [[https://youtu.be/PNE-mgkZ6HM][Part 6]] for a full explanation.
 
 
 #+begin_src emacs-lisp
@@ -683,7 +682,7 @@ This section contains the basic configuration for /org-mode/ plus the configurat
 #+end_src
 
 *** Nicer Heading Bullets
-[[https://github.com/sabof/org-bullets][org-bullets]] replaces the heading stars in org-mode buffers with nicer looking characters that you can control. Another option for this is [[https://github.com/integral-dw/org-superstar-mode][org-superstar-mode]] which we may cover in a later video.
+[[https://github.com/sabof/org-bullets][org-bullets]] replaces the heading stars in =org-mode= buffers with nicer looking characters that you can control. Another option for this is [[https://github.com/integral-dw/org-superstar-mode][org-superstar-mode]] which we may cover in a later video.
 
 #+begin_src emacs-lisp
 
@@ -696,7 +695,7 @@ This section contains the basic configuration for /org-mode/ plus the configurat
 
 *** Center Org Buffers
 
-We use [[https://github.com/joostkremers/visual-fill-column][visual-fill-column]] to center /org-mode/ buffers for a more pleasing writing experience as it centers the contents of the buffer horizontally to seem more like you are editing a document. This is really a matter of personal preference so you can remove the block below if you don’t like the behavior.
+We use [[https://github.com/joostkremers/visual-fill-column][visual-fill-column]] to center =org-mode= buffers for a more pleasing writing experience as it centers the contents of the buffer horizontally to seem more like you are editing a document. This is really a matter of personal preference so you can remove the block below if you don’t like the behavior.
 
 #+begin_src emacs-lisp
 
@@ -712,7 +711,7 @@ We use [[https://github.com/joostkremers/visual-fill-column][visual-fill-column]
 
 ** Configure Babel Languages
 
-To execute or export code in /org-mode/ code blocks, you’ll need to set up /org-babel-load-languages/ for each language you’d like to use. [[https://orgmode.org/worg/org-contrib/babel/languages.html][This page]] documents all of the languages that you can use with /org-babel./
+To execute or export code in =org-mode= code blocks, you’ll need to set up =org-babel-load-languages= for each language you’d like to use. [[https://orgmode.org/worg/org-contrib/babel/languages.html][This page]] documents all of the languages that you can use with =org-babel=.
 
 #+begin_src emacs-lisp
   (with-eval-after-load 'org
@@ -727,7 +726,7 @@ To execute or export code in /org-mode/ code blocks, you’ll need to set up /or
 
 ** Auto-tangle Configuration Files
 
-This snippet adds a hook to /org-mode/ buffers so that /efs/org-babel-tangle-config/ gets executed each time such a buffer gets saved. This function checks to see if the file being saved is the Emacs.org file you’re looking at right now, and if so, automatically exports the configuration here to the associated output files.
+This snippet adds a hook to =org-mode= buffers so that =efs/org-babel-tangle-config= gets executed each time such a buffer gets saved. This function checks to see if the file being saved is the Emacs.org file you’re looking at right now, and if so, automatically exports the configuration here to the associated output files.
 
 #+begin_src emacs-lisp
 
@@ -754,11 +753,11 @@ This snippet adds a hook to /org-mode/ buffers so that /efs/org-babel-tangle-con
 
 **** lsp-mode
 
-We use the excellent [[https://emacs-lsp.github.io/lsp-mode/][lsp-mode]] to enable IDE-like functionality for many different programming languages via “language servers” that speak the [[https://microsoft.github.io/language-server-protocol/][Language Server Protocol]]. Before trying to set up /lsp-mode/ for a particular language, check out the [[https://emacs-lsp.github.io/lsp-mode/page/languages/][documentation for your language]] so that you can learn which language servers are available and how to install them.
+We use the excellent [[https://emacs-lsp.github.io/lsp-mode/][lsp-mode]] to enable IDE-like functionality for many different programming languages via “language servers” that speak the [[https://microsoft.github.io/language-server-protocol/][Language Server Protocol]]. Before trying to set up =lsp-mode= for a particular language, check out the [[https://emacs-lsp.github.io/lsp-mode/page/languages/][documentation for your language]] so that you can learn which language servers are available and how to install them.
 
-The /lsp-keymap-prefix/ setting enables you to define a prefix for where /lsp-mode’s/ default keybindings will be added. I *highly recommend* using the prefix to find out what you can do with /lsp-mode/ in a buffer.
+The =lsp-keymap-prefix= setting enables you to define a prefix for where  =lsp-mode= ’S default keybindings will be added. I *highly recommend* using the prefix to find out what you can do with =lsp-mode= in a buffer.
 
-The /which-key/ integration adds helpful descriptions of the various keys so you should be able to learn a lot just by pressing /C-c l/ in a /lsp-mode/ buffer and trying different things that you find there.
+The =which-key= integration adds helpful descriptions of the various keys so you should be able to learn a lot just by pressing =C-c l= in a =lsp-mode= buffer and trying different things that you find there.
 
 #+begin_src emacs-lisp
         
@@ -779,7 +778,7 @@ The /which-key/ integration adds helpful descriptions of the various keys so you
 #+end_src
 
 **** lsp-ui
-[[https://emacs-lsp.github.io/lsp-ui/][lsp-ui]] is a set of UI enhancements built on top of /lsp-mode/ which make Emacs feel even more like an IDE. Check out the screenshots on the /lsp-ui/ homepage (linked at the beginning of this paragraph) to see examples of what it can do.
+[[https://emacs-lsp.github.io/lsp-ui/][lsp-ui]] is a set of UI enhancements built on top of =lsp-mode= which make Emacs feel even more like an IDE. Check out the screenshots on the =lsp-ui= homepage (linked at the beginning of this paragraph) to see examples of what it can do.
 
 #+begin_src emacs-lisp
 
@@ -794,9 +793,9 @@ The /which-key/ integration adds helpful descriptions of the various keys so you
 [[https://github.com/emacs-lsp/lsp-treemacs][lsp-treemacs]] provides nice tree views for different aspects of your code like symbols in a file, references of a symbol, or diagnostic messages (errors and warnings) that are found in your code.
 
 Try these commands with /M-x/:
-    -  lsp-treemacs-symbols - Show a tree view of the symbols in the current file
-    - lsp-treemacs-references - Show a tree view for the references of the symbol under the cursor
-    - lsp-treemacs-error-list - Show a tree view for the diagnostic messages in the project
+    -  =lsp-treemacs-symbols= - Show a tree view of the symbols in the current file
+    - =lsp-treemacs-references= - Show a tree view for the references of the symbol under the cursor
+    - =lsp-treemacs-error-list= - Show a tree view for the diagnostic messages in the project
      
 This package is built on the [[https://github.com/Alexander-Miller/treemacs][treemacs]] package which might be of some interest to you if you like to have a file browser at the left side of your screen in your editor.
 
@@ -809,12 +808,12 @@ This package is built on the [[https://github.com/Alexander-Miller/treemacs][tre
 
 **** lsp-ivy
 
-[[https://github.com/emacs-lsp/lsp-ivy][lsp-ivy]] integrates Ivy with /lsp-mode/ to make it easy to search for things by name in your code. When you run these commands, a prompt will appear in the minibuffer allowing you to type part of the name of a symbol in your code. Results will be populated in the minibuffer so that you can find what you’re looking for and jump to that location in the code upon selecting the result.
+[[https://github.com/emacs-lsp/lsp-ivy][lsp-ivy]] integrates Ivy with =lsp-mode= to make it easy to search for things by name in your code. When you run these commands, a prompt will appear in the minibuffer allowing you to type part of the name of a symbol in your code. Results will be populated in the minibuffer so that you can find what you’re looking for and jump to that location in the code upon selecting the result.
 
-Try these commands with /M-x/:
+Try these commands with =M-x=:
 
-    - /lsp-ivy-workspace-symbol/ - Search for a symbol name in the current project workspace
-    - /lsp-ivy-global-workspace-symbol/ - Search for a symbol name in all active project workspaces
+    - =lsp-ivy-workspace-symbol= - Search for a symbol name in the current project workspace
+    - =lsp-ivy-global-workspace-symbol=- Search for a symbol name in all active project workspaces
       
 #+begin_src emacs-lisp
 
@@ -866,9 +865,9 @@ This is a basic configuration for the TypeScript language so that =.ts= files ac
   
 #+end_src
 
-*Important note!* For /lsp-mode/ to work with TypeScript (and JavaScript) you will need to install a language server on your machine. If you have Node.js installed, the easiest way to do that is by running the following command:
+*Important note!* For =lsp-mode= to work with TypeScript (and JavaScript) you will need to install a language server on your machine. If you have Node.js installed, the easiest way to do that is by running the following command:
 
-    npm install -g typescript-language-server typescript
+    =npm install -g typescript-language-server typescript=
 
 This will install the [[https://github.com/theia-ide/typescript-language-server][typescript-language-server]] and the TypeScript compiler package.
 
@@ -912,7 +911,7 @@ You can use the pyvenv package to use =virtualenv= environments in Emacs. The =p
 
 
 **** Company Mode
-[[http://company-mode.github.io/][Company Mode]] provides a nicer in-buffer completion interface than /completion-at-point/ which is more reminiscent of what you would expect from an IDE. We add a simple configuration to make the keybindings a little more useful (/TAB/ now completes the selection and initiates completion at the current location if needed).
+[[http://company-mode.github.io/][Company Mode]] provides a nicer in-buffer completion interface than =completion-at-point= which is more reminiscent of what you would expect from an IDE. We add a simple configuration to make the keybindings a little more useful (=TAB= now completes the selection and initiates completion at the current location if needed).
 
 We also use [[https://github.com/sebastiencs/company-box][company-box]] to further enhance the look of the completions with icons and better overall presentation.
 
@@ -979,7 +978,8 @@ We also use [[https://github.com/sebastiencs/company-box][company-box]] to furth
 
 
 ** Commenting
-Emacs’ built in commenting functionality /comment-dwim/ (usually bound to /M-;/) doesn’t always comment things in the way you might expect so we use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to provide a more familiar behavior. I’ve bound it to /M-// since other editors sometimes use this binding but you could also replace Emacs’ /M-;/ binding with this command.
+
+Emacs’ built in commenting functionality =comment-dwim= (usually bound to =M-;=) doesn’t always comment things in the way you might expect so we use [[https://github.com/redguardtoo/evil-nerd-commenter][evil-nerd-commenter]] to provide a more familiar behavior. I’ve bound it to /M-// since other editors sometimes use this binding but you could also replace Emacs’ =M-;= binding with this command.
 
 #+begin_src emacs-lisp
 
@@ -1004,18 +1004,18 @@ Emacs’ built in commenting functionality /comment-dwim/ (usually bound to /M-;
 * Terminals
 ** term-mode
 
-/term-mode/ is a built-in terminal emulator in Emacs. Because it is written in Emacs Lisp, you can start using it immediately with very little configuration. If you are on Linux or macOS, /term-mode/ is a great choice to get started because it supports fairly complex terminal applications (/htop/, /vim/, etc) and works pretty reliably. However, because it is written in Emacs Lisp, it can be slower than other options like /vterm/. The speed will only be an issue if you regularly run console apps with a lot of output.
+/term-mode/ is a built-in terminal emulator in Emacs. Because it is written in Emacs Lisp, you can start using it immediately with very little configuration. If you are on Linux or macOS, =term-mode= is a great choice to get started because it supports fairly complex terminal applications (=htop=, =vim=, etc) and works pretty reliably. However, because it is written in Emacs Lisp, it can be slower than other options like =vterm=. The speed will only be an issue if you regularly run console apps with a lot of output.
 
-One important thing to understand is /line-mode/ versus /char-mode/. /line-mode/ enables you to use normal Emacs keybindings while moving around in the terminal buffer while char-mode sends most of your keypresses to the underlying terminal. While using /term-mode/, you will want to be in /char-mode/ for any terminal applications that have their own keybindings. If you’re just in your usual shell, /line-mode/ is sufficient and feels more integrated with Emacs.
+One important thing to understand is =line-mode= versus =char-mode= . =line-mode= enables you to use normal Emacs keybindings while moving around in the terminal buffer while =char-mode= sends most of your keypresses to the underlying terminal. While using =term-mode=, you will want to be in =char-mode= for any terminal applications that have their own keybindings. If you’re just in your usual shell, =line-mode= is sufficient and feels more integrated with Emacs.
 
-With /evil-collection/ installed, you will automatically switch to /char-mode/ when you enter Evil’s insert mode (press /i/). You will automatically be switched back to /line-mode/ when you enter Evil’s normal mode (press /ESC/).
+With =evil-collection= installed, you will automatically switch to =char-mode= when you enter Evil’s insert mode (press =i=). You will automatically be switched back to =line-mode= when you enter Evil’s normal mode (press =ESC=).
 
-Run a terminal with /M-x term!/
+Run a terminal with =M-x term!=
 
-- C-c C-p / C-c C-n - go back and forward in the buffer’s prompts (also [[ and ]] with evil-mode)
-- C-c C-k - Enter char-mode
-- C-c C-j - Return to line-mode
-- If you have /evil-collection/ installed, /term-mode/ will enter char mode when you use Evil’s Insert mode
+- =C-c C-p=  /  =C-c C-n=  - go back and forward in the buffer’s prompts (also [[ and ]] with evil-mode)
+- =C-c C-k= - Enter char-mode
+- =C-c C-j= - Return to line-mode
+- If you have =evil-collection= installed, =term-mode= will enter char mode when you use Evil’s Insert mode
 
 #+begin_src emacs-lisp
 
@@ -1032,7 +1032,7 @@ Run a terminal with /M-x term!/
 
 ** Better term-mode colors
 
-The /eterm-256color/ package enhances the output of /term-mode/ to enable handling of a wider range of color codes so that many popular terminal applications look as you would expect them to. Keep in mind that this package requires /ncurses/ to be installed on your machine so that it has access to the /tic/ program. Most Linux distributions come with this program installed already so you may not have to do anything extra to use it.
+The =eterm-256color= package enhances the output of =term-mode= to enable handling of a wider range of color codes so that many popular terminal applications look as you would expect them to. Keep in mind that this package requires =ncurses= to be installed on your machine so that it has access to the =tic= program. Most Linux distributions come with this program installed already so you may not have to do anything extra to use it.
 
 #+begin_src emacs-lisp
 
@@ -1045,7 +1045,7 @@ The /eterm-256color/ package enhances the output of /term-mode/ to enable handli
 
 [[https://github.com/akermu/emacs-libvterm/][vterm]] is an improved terminal emulator package which uses a compiled native module to interact with the underlying terminal applications. This enables it to be much faster than /term-mode/ and to also provide a more complete terminal emulation experience.
 
-Make sure that you have the [[https://github.com/akermu/emacs-libvterm/#requirements][necessary dependencies]] installed before trying to use /vterm/ because there is a module that will need to be compiled before you can use it successfully.
+Make sure that you have the [[https://github.com/akermu/emacs-libvterm/#requirements][necessary dependencies]] installed before trying to use =vterm= because there is a module that will need to be compiled before you can use it successfully.
 
 #+begin_src emacs-lisp
 
@@ -1064,16 +1064,16 @@ Make sure that you have the [[https://github.com/akermu/emacs-libvterm/#requirem
 
 ** shell-mode
 
-[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Interactive-Shell.html#Interactive-Shell][shell-mode]] is a middle ground between /term-mode/ and Eshell. It is not a terminal emulator so more complex terminal programs will not run inside of it. It does have much better integration with Emacs because all command input in this mode is handled by Emacs and then sent to the underlying shell once you press Enter. This means that you can use /evil-mode’s/ editing motions on the command line, unlike in the terminal emulator modes above.
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Interactive-Shell.html#Interactive-Shell][shell-mode]] is a middle ground between =term-mode= and Eshell. It is not a terminal emulator so more complex terminal programs will not run inside of it. It does have much better integration with Emacs because all command input in this mode is handled by Emacs and then sent to the underlying shell once you press Enter. This means that you can use =evil-mode= ’s editing motions on the command line, unlike in the terminal emulator modes above.
 
 *Useful key bindings:*
 
-        - C-c C-p / C-c C-n - go back and forward in the buffer’s prompts (also [[ and ]] with evil-mode)
-        - M-p / M-n - go back and forward in the input history
-        - C-c C-u - delete the current input string backwards up to the cursor
-        - counsel-shell-history - A searchable history of commands typed into the shell
+        -  =C-c C-p=  /  =C-c C-n= - go back and forward in the buffer’s prompts (also [[ and ]] with evil-mode)
+        - =M-p=  /  =M-n= - go back and forward in the input history
+        - =C-c C-u= - delete the current input string backwards up to the cursor
+        - =counsel-shell-history= - A searchable history of commands typed into the shell
 
-One advantage of /shell-mode/ on Windows is that it’s the only way to run /cmd.exe/, PowerShell, Git Bash, etc from within Emacs. Here’s an example of how you would set up /shell-mode/ to run PowerShell on Windows:
+One advantage of =shell-mode= on Windows is that it’s the only way to run =cmd.exe=, PowerShell, Git Bash, etc from within Emacs. Here’s an example of how you would set up =shell-mode= to run PowerShell on Windows:
 
 #+begin_src emacs-lisp
 
@@ -1085,17 +1085,17 @@ One advantage of /shell-mode/ on Windows is that it’s the only way to run /cmd
 
 ** Eshell
 
-[[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html#Contributors-to-Eshell][Eshell]] is Emacs’ own shell implementation written in Emacs Lisp. It provides you with a cross-platform implementation (even on Windows!) of the common GNU utilities you would find on Linux and macOS (/ls/, /rm/, /mv/, /grep/, /etc/). It also allows you to call Emacs Lisp functions directly from the shell and you can even set up aliases (like aliasing /vim/ to /find-file/). Eshell is also an Emacs Lisp REPL which allows you to evaluate full expressions at the shell.
+[[https://www.gnu.org/software/emacs/manual/html_mono/eshell.html#Contributors-to-Eshell][Eshell]] is Emacs’ own shell implementation written in Emacs Lisp. It provides you with a cross-platform implementation (even on Windows!) of the common GNU utilities you would find on Linux and macOS (=ls=, =rm=, =mv=, =grep=, /etc/). It also allows you to call Emacs Lisp functions directly from the shell and you can even set up aliases (like aliasing =vim= to =find-file=). Eshell is also an Emacs Lisp REPL which allows you to evaluate full expressions at the shell.
 
 The downsides to Eshell are that it can be harder to configure than other packages due to the particularity of where you need to set some options for them to go into effect, the lack of shell completions (by default) for some useful things like Git commands, and that REPL programs sometimes don’t work as well. However, many of these limitations can be dealt with by good configuration and installing external packages, so don’t let that discourage you from trying it!
 
 
 *Useful key bindings:*
 
-- C-c C-p / C-c C-n - go back and forward in the buffer’s prompts (also [[ and ]] with evil-mode)
-- M-p / M-n - go back and forward in the input history
-- C-c C-u - delete the current input string backwards up to the cursor
-- counsel-esh-history - A searchable history of commands typed into Eshell
+- =C-c C-p=  /  =C-c C-n= - go back and forward in the buffer’s prompts (also [[ and ]] with evil-mode)
+- =M-p=  /  =M-n=  - go back and forward in the input history
+- =C-c C-u= - delete the current input string backwards up to the cursor
+- =counsel-esh-history= - A searchable history of commands typed into Eshell
 
  We will be covering Eshell more in future videos highlighting other things you can do with it.
 
@@ -1144,9 +1144,68 @@ For more thoughts on Eshell, check out these articles by Pierre Neidhardt:
 
 ** Dired
 
-Dired doesn’t need much configuration, but the following just ensures that Dired buffers are organized in a way that makes sense to me, are free from unneeded information (at first), and doesn’t leave a ton of buffers open as I move around.
+Dired is a built-in file manager for Emacs that does some pretty amazing things! Here are some key bindings you should try out:
 
-I also add a binding for b to /dired-up-directory/ because it seems very strange to me that they have /f/ bound to /dired-find-file/ without /b/ moving in the “opposite” direction.
+*Key Bindings*
+
+*Navigation*
+
+*Emacs / Evil*
+
+    - =n=  /  =j=  - next line
+    - =p=  /  =k= - previous line
+    - =j=  /  =J= - jump to file in buffer
+    - =RET= - select file or directory
+    - =^= - go to parent directory
+    - =S-RET=  /  =g O= - Open file in “other” window
+    - =M-RET= - Show file in other window without focusing (previewing files)
+    - =g o= (=dired-view-file=) - Open file but in a “preview” mode, close with q
+    - =g=  /  =g r= Refresh the buffer with =revert-buffer= after changing configuration (and after filesystem changes!)
+
+*Marking files*
+
+    -  =m=  - Marks a file
+    -  =u= - Unmarks a file
+    -  =U= - Unmarks all files in buffer>
+    - =*t=  /  =t= - Inverts marked files in buffer
+    - =% m= - Mark files in buffer using regular expression
+    - =*= - Lots of other auto-marking functions
+    - =k=  /  =K=  - “Kill” marked items (refresh buffer with g / g r to get them back)
+    - Many operations can be done on a single file if there are no active marks!
+
+*Copying and Renaming files*
+
+    - =C= - Copy marked files (or if no files are marked, the current file)
+    - Copying single and multiple files
+    - =U= - Unmark all files in buffer
+    - =R= - Rename marked files, renaming multiple is a move!
+    - =% R= - Rename based on regular expression: ^test , old-\&
+  
+*Power command*: =C-x C-q= (=dired-toggle-read-only=) - Makes all file names in the buffer editable directly to rename them! Press =Z Z= to confirm renaming or =Z Q= to abort.
+
+*Deleting files*
+
+    - =D= - Delete marked file
+    - =d= - Mark file for deletion
+    - =x= - Execute deletion for marks
+    - =delete-by-moving-to-trash= - Move to trash instead of deleting permanently
+
+*Creating and extracting archives*
+
+    - =Z= - Compress or uncompress a file or folder to (.tar.gz)
+    - =c= - Compress selection to a specific file
+    - =dired-compress-files-alist= - Bind compression commands to file extension
+
+*Other common operations*
+
+    - =T= - Touch (change timestamp)
+    - =M= - Change file mode
+    - =O= - Change file owner
+    - =G= - Change file group
+    - =S= - Create a symbolic link to this file
+    - =L= - Load an Emacs Lisp file into Emacs
+
+ *Configuration*
 
 #+begin_src emacs-lisp
 
@@ -1199,10 +1258,16 @@ I also add a binding for b to /dired-up-directory/ because it seems very strange
 
 ** Some App
 
+This is an example of configuring another non-Emacs application using org-mode. Not only do we write out the configuration at =.config/some-app/config=, we also compute the value that gets stored in this configuration from the Emacs Lisp block above it.
+
 #+NAME: the-value
 #+begin_src emacs-lisp
+
   (+ 55 100)
+  
 #+end_src
+
+*NOTE:* Set the =:tangle= parameter below to =.config/some-app/config= for this to work!
 
 #+begin_src conf :tangle ~/Projects/Code/runemacs/.config/some-app/config :noweb yes
 
@@ -1213,6 +1278,11 @@ I also add a binding for b to /dired-up-directory/ because it seems very strange
 Add =:noweb yes=!
 
 *  Structure Templates
+
+Org Mode’s [[https://orgmode.org/manual/Structure-Templates.html][structure templates]] feature enables you to quickly insert code blocks into your Org files in combination with =org-tempo= by typing =<= followed by the template name like =el= or =py= and then press =TAB=. For example, to insert an empty =emacs-lisp= block below, you can type =<el= and press =TAB= to expand into such a block.
+
+You can add more src block templates below by copying one of the lines and changing the two strings at the end, the first to be the template name and the second to contain the name of the language [[https://orgmode.org/worg/org-contrib/babel/languages.html][as it is known by Org Babel]].
+
 
 #+begin_src emacs-lisp
 
